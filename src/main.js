@@ -1,6 +1,6 @@
-import './style.css'
+import App from './app'
 
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hola Mundo</h1>
-`
+document.addEventListener('DOMContentLoaded', () => {
+  App();
+})
