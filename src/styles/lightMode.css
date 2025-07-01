@@ -1,0 +1,16 @@
+@import "variables.css";
+
+/* BODY */
+body.light{
+    background-color: var(--neutral-0);
+}
+
+/* BOTON */
+.btn__mode.light{
+    background-color: var(--neutral-100);
+}
+
+/* TITLE */
+.title.light{
+    color: var(--neutral-900);
+}

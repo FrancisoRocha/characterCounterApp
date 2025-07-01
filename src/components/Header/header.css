@@ -1,0 +1,34 @@
+@import "../../styles/variables.css";
+
+/* HEADER */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.6rem 1.6rem;
+}
+
+@media(min-width: 768px){
+    .header{
+        margin: 1.6rem 3.2rem;
+    }
+}
+
+@media(min-width: 1024px){
+    .header{
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+}
+
+/* BOTON THEME MODE */
+.btn__mode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 0.8rem;
+    border: none;
+    cursor: pointer;
+}

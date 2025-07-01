@@ -1,5 +1,7 @@
 import "../src/styles/normalize.css";
 import "../src/styles/globales.css";
+import { header } from "./components/Header/header";
+import { Title } from "./components/Title/title";
 
 // Nucleo de la App
 
@@ -9,8 +11,12 @@ export default function App() {
 
   app.innerHTML = '';
 
-  const mensaje = "Hola Mundo desde el App.js";
+  const container = document.createElement('DIV');
+  container.classList.add('main-container');
 
-  app.innerHTML = mensaje;
+  container.append(header());
+  container.append(Title())
+
+  app.append(container)
 
 }
