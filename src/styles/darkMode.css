@@ -14,3 +14,77 @@ body.dark{
 .title.dark{
     color: var(--neutral-100);
 }
+
+/* TEXTARE */
+.textArea.dark{
+    background-color: var(--neutral-800);
+    color: var(--neutral-200);
+    border: 0.1rem solid var(--neutral-700);
+}
+
+/* INPUTS OPTIONS */
+.excludeSpaces.dark,
+.setCharacter.dark,
+.reading__time.dark{
+    color: var(--neutral-200);
+}
+
+/* Contenedor del label - Dark Mode */
+.checkbox-container.dark{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    padding-left: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    color: var(--neutral-200);
+}
+
+/* Ocultar input nativo - Dark Mode */
+.checkbox-container.dark input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+/* El nuevo checkbox visual - Dark Mode */
+.checkbox-container.dark .custom-checkbox{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: .1rem solid var(--neutral-200);
+    border-radius: .4rem;
+    transition: all 0.3s ease;
+}
+
+/* Cuando está marcado - Dark Mode */
+.checkbox-container.dark input:checked + .custom-checkbox{
+    background-color: var(--purple-400);
+    border-color: var(--purple-400);
+}
+
+/* Check interno (la palomita) - Dark Mode */
+.checkbox-container.dark .custom-checkbox::after{
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--neutral-900);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Mostrar check cuando está marcado - Dark Mode */
+.checkbox-container.dark input:checked + .custom-checkbox::after {
+  display: block;
+}

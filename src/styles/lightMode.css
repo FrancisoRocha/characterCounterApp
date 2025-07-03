@@ -14,3 +14,77 @@ body.light{
 .title.light{
     color: var(--neutral-900);
 }
+
+/* TEXTARE */
+.textArea.light{
+    background-color: var(--neutral-100);
+    color: var(--neutral-700);
+    border: 0.1rem solid var(--neutral-200);
+}
+
+/* INPUTS OPTIONS */
+.excludeSpaces.light,
+.setCharacter.light,
+.reading__time.light{
+    color: var(--neutral-700);
+}
+
+/* Contenedor del label - Light Mode */
+.checkbox-container.light{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    padding-left: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    color: var(--neutral-700);
+}
+
+/* Ocultar input nativo - Light Mode */
+.checkbox-container.light input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+/* El nuevo checkbox visual - Light Mode */
+.checkbox-container.light .custom-checkbox{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: .1rem solid var(--neutral-600);
+    border-radius: .4rem;
+    transition: all 0.3s ease;
+}
+
+/* Cuando está marcado - Light Mode */
+.checkbox-container.light input:checked + .custom-checkbox{
+    background-color: var(--purple-500);
+    border-color: var(--purple-500);
+}
+
+/* Check interno (la palomita) - Light Mode */
+.checkbox-container.light .custom-checkbox::after{
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--neutral-0);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Mostrar check cuando está marcado - Light Mode */
+.checkbox-container.light input:checked + .custom-checkbox::after {
+  display: block;
+}
